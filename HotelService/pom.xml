@@ -6,13 +6,13 @@
 		<groupId>org.springframework.boot</groupId>
 		<artifactId>spring-boot-starter-parent</artifactId>
 		<version>3.2.2</version>
-		<relativePath /> <!-- lookup parent from repository -->
+		<relativePath/> <!-- lookup parent from repository -->
 	</parent>
-	<groupId>com.micro.user</groupId>
-	<artifactId>UserService</artifactId>
+	<groupId>com.micro.hotel</groupId>
+	<artifactId>HotelService</artifactId>
 	<version>0.0.1-SNAPSHOT</version>
-	<name>UserService</name>
-	<description>User service in MicroService</description>
+	<name>HotelService</name>
+	<description>Hotel service in MicroService</description>
 	<properties>
 		<java.version>17</java.version>
 	</properties>
@@ -25,9 +25,16 @@
 			<groupId>org.springframework.boot</groupId>
 			<artifactId>spring-boot-starter-web</artifactId>
 		</dependency>
+
 		<dependency>
-			<groupId>com.mysql</groupId>
-			<artifactId>mysql-connector-j</artifactId>
+			<groupId>org.springframework.boot</groupId>
+			<artifactId>spring-boot-devtools</artifactId>
+			<scope>runtime</scope>
+			<optional>true</optional>
+		</dependency>
+		<dependency>
+			<groupId>org.postgresql</groupId>
+			<artifactId>postgresql</artifactId>
 			<scope>runtime</scope>
 		</dependency>
 		<dependency>
@@ -40,11 +47,8 @@
 			<artifactId>spring-boot-starter-test</artifactId>
 			<scope>test</scope>
 		</dependency>
-		<dependency>
-			<groupId>org.springframework.boot</groupId>
-			<artifactId>spring-boot-devtools</artifactId>
-		</dependency>
 	</dependencies>
+
 	<build>
 		<plugins>
 			<plugin>
@@ -61,4 +65,5 @@
 			</plugin>
 		</plugins>
 	</build>
+
 </project>
